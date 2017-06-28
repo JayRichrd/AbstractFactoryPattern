@@ -16,4 +16,13 @@ public class SqlServerDepartment implements IDepartment {
 		return null;
 	}
 
+	/**
+	 * 无参构造函数
+	 */
+	public SqlServerDepartment() {
+		super();
+	}
+	
+	
+
 }

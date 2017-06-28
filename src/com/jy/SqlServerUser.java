@@ -16,4 +16,11 @@ public class SqlServerUser implements IUser {
 		return null;
 	}
 
+	/**
+	 * 无参构造函数
+	 */
+	public SqlServerUser() {
+		super();
+	}
+
 }

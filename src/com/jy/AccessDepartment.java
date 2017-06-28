@@ -16,4 +16,11 @@ public class AccessDepartment implements IDepartment {
 		return null;
 	}
 
+	/**
+	 * 无参构造函数
+	 */
+	public AccessDepartment() {
+		super();
+	}
+
 }
