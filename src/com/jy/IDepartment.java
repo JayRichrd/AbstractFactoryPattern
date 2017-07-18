@@ -1,11 +1,11 @@
-package com.jy;
+锘縫ackage com.jy;
 
 import com.jy.bean.Department;
 
 public interface IDepartment {
-	// 插入部门
+	// 鎻掑叆閮ㄩ棬
 	void insert(Department department);
 
-	// 根据id获取部门
+	// 鏍规嵁id鑾峰彇閮ㄩ棬
 	Department getUser(int id);
 }

@@ -1,11 +1,11 @@
-package com.jy;
+锘縫ackage com.jy;
 
 import com.jy.bean.User;
 
 public interface IUser {
-	// 插入用户
+	// 鎻掑叆鐢ㄦ埛
 	void insert(User user);
 
-	// 根据id获取用户
+	// 鏍规嵁id鑾峰彇鐢ㄦ埛
 	User getUser(int id);
 }

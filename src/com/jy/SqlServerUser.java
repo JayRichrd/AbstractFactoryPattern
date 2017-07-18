@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 import com.jy.bean.User;
 
@@ -6,18 +6,18 @@ public class SqlServerUser implements IUser {
 
 	@Override
 	public void insert(User user) {
-		System.out.println("ÔÚSqlServerÖĞÔö¼ÓÒ»ÌõUser¼ÇÂ¼");
+		System.out.println("åœ¨SqlServerä¸­å¢åŠ ä¸€æ¡Userè®°å½•");
 	}
 
 	@Override
 	public User getUser(int id) {
-		System.out.println("ÊäÈëµÄid£º" + id);
-		System.out.println("ÔÚSqlServerÖĞ¸ù¾İidÖµ»ñÈ¡Ò»ÌõUser¼ÇÂ¼");
+		System.out.println("è¾“å…¥çš„idï¼š" + id);
+		System.out.println("åœ¨SqlServerä¸­æ ¹æ®idå€¼è·å–ä¸€æ¡Userè®°å½•");
 		return null;
 	}
 
 	/**
-	 * ÎŞ²Î¹¹Ôìº¯Êı
+	 * æ— å‚æ„é€ å‡½æ•°
 	 */
 	public SqlServerUser() {
 		super();

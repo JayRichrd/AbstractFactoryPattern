@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,20 +14,20 @@ public class AbstractFactoryPattern {
 	public static void main(String[] args) {
 		// Scanner scanner = new Scanner(System.in);
 		//
-		// // Êı¾İ¿âÀàĞÍ
+		// // æ•°æ®åº“ç±»å‹
 		// int dbType = 0;
-		// System.out.print("ÇëÊäÈëÒª²Ù×÷µÄÊı¾İ¿âÀàĞÍ(1´ú±íSqlServer;2´ú±íAccess):");
+		// System.out.print("è¯·è¾“å…¥è¦æ“ä½œçš„æ•°æ®åº“ç±»å‹(1ä»£è¡¨SqlServer;2ä»£è¡¨Access):");
 		// dbType = scanner.nextInt();
 		//
-		// // ¸ù¾İÊäÈëµÄ²»Í¬Éú³É²»Í¬µÄ¹¤³§Àà
+		// // æ ¹æ®è¾“å…¥çš„ä¸åŒç”Ÿæˆä¸åŒçš„å·¥å‚ç±»
 		// IFactory iFactory = null;
-		// StringBuilder bdTypeSB = new StringBuilder("Äã½«Òª²Ù×÷µÄÊÇ");
+		// StringBuilder bdTypeSB = new StringBuilder("ä½ å°†è¦æ“ä½œçš„æ˜¯");
 		// switch (dbType) {
-		// case 1: // ²Ù×÷SqlSererÊı¾İ¿â
+		// case 1: // æ“ä½œSqlSereræ•°æ®åº“
 		// bdTypeSB.append("SqlServer");
 		// iFactory = new SqlServerFactory();
 		// break;
-		// case 2: // ²Ù×÷AccessÊı¾İ¿â
+		// case 2: // æ“ä½œAccessæ•°æ®åº“
 		// bdTypeSB.append("Access");
 		// iFactory = new AccessFactory();
 		// break;
@@ -35,25 +35,25 @@ public class AbstractFactoryPattern {
 		// break;
 		// }
 		//
-		// // Éú³É²»Í¬µÄÊı¾İ²Ù×÷Àà
+		// // ç”Ÿæˆä¸åŒçš„æ•°æ®æ“ä½œç±»
 		// System.out.println(bdTypeSB.toString());
 		//
-		// // Êı¾İÀàĞÍ
+		// // æ•°æ®ç±»å‹
 		// int dataType = 0;
-		// System.out.print("ÇëÊäÈëÒª²Ù×÷µÄÊı¾İ¿âÀàĞÍ(1´ú±íUser;2´ú±íDepartment):");
+		// System.out.print("è¯·è¾“å…¥è¦æ“ä½œçš„æ•°æ®åº“ç±»å‹(1ä»£è¡¨User;2ä»£è¡¨Department):");
 		// dataType = scanner.nextInt();
 		//
-		// // ¸ù¾İÊäÈëÑ¡ÔñĞèÒª²Ù×÷µÄÊı¾İÀàĞÍ
-		// StringBuilder dataTypeSB = new StringBuilder("Äã½«Òª²Ù×÷Êı¾İÀàĞÍÊÇ");
+		// // æ ¹æ®è¾“å…¥é€‰æ‹©éœ€è¦æ“ä½œçš„æ•°æ®ç±»å‹
+		// StringBuilder dataTypeSB = new StringBuilder("ä½ å°†è¦æ“ä½œæ•°æ®ç±»å‹æ˜¯");
 		// switch (dataType) {
-		// case 1: // ²Ù×÷User
+		// case 1: // æ“ä½œUser
 		// dataTypeSB.append("User");
 		// System.out.println(dataTypeSB.toString());
 		// IUser iUser = iFactory.createUser();
 		// iUser.insert(new User());
 		// iUser.getUser(4);
 		// break;
-		// case 2: // ²Ù×÷Department
+		// case 2: // æ“ä½œDepartment
 		// dataTypeSB.append("Department");
 		// System.out.println(dataTypeSB.toString());
 		// IDepartment iDepartment = iFactory.createDepartment();
@@ -64,17 +64,17 @@ public class AbstractFactoryPattern {
 		// break;
 		// }
 		//
-		// // ÊÍ·Å×ÊÔ´
+		// // é‡Šæ”¾èµ„æº
 		// dataTypeSB = null;
 		// bdTypeSB = null;
 		// scanner.close();
 
-		// ²Ù×÷UserÊı¾İ
+		// æ“ä½œUseræ•°æ®
 		IUser iUser = DataOperation.createUser();
 		iUser.insert(new User());
 		iUser.getUser(1);
 
-		// ²Ù×÷DepartmentÊı¾İ
+		// æ“ä½œDepartmentæ•°æ®
 		IDepartment iDepartment = DataOperation.createDepartment();
 		iDepartment.insert(new Department());
 		iDepartment.getUser(2);

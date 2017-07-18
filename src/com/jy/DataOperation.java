@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,24 +6,24 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class DataOperation {
-	// ·´ÉäÊ¹ÓÃµÄ°üÃû
+	// åå°„ä½¿ç”¨çš„åŒ…å
 	private static final String PACKAGE_NAME = "com.jy";
-	// UserÊı¾İÀàĞÍÃû
+	// Useræ•°æ®ç±»å‹å
 	private static final String USER = "User";
-	// DepartmentÊı¾İÀàĞÍÃû
+	// Departmentæ•°æ®ç±»å‹å
 	private static final String DEPARTMENT = "Department";
 
-	// ¶ÁÈ¡ÊôĞÔ¶ÔÏó
+	// è¯»å–å±æ€§å¯¹è±¡
 	private static Properties mProperties;
-	// Êı¾İ¿âÃû
+	// æ•°æ®åº“å
 	private static String dbname;
 
 	static {
-		try (FileInputStream mFis = new FileInputStream("./resources/db.properties");) { // Java7ÔöÇ¿tryÓï¾ä¶¨ÒåÊäÈëÎÄ¼şÁ÷
+		try (FileInputStream mFis = new FileInputStream("./resources/db.properties");) { // Java7å¢å¼ºtryè¯­å¥å®šä¹‰è¾“å…¥æ–‡ä»¶æµ
 			mProperties = new Properties();
-			// ¼ÓÔØÊôĞÔÎÄ¼ş
+			// åŠ è½½å±æ€§æ–‡ä»¶
 			mProperties.load(mFis);
-			// ´ÓÊôĞÔÎÄ¼şÖĞ¶ÁÈ¡ÊôĞÔÖµ
+			// ä»å±æ€§æ–‡ä»¶ä¸­è¯»å–å±æ€§å€¼
 			dbname = mProperties.getProperty("dbname");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -33,16 +33,16 @@ public class DataOperation {
 	}
 
 	/**
-	 * Éú³É²Ù×÷Êı¾İUserµÄÀà
+	 * ç”Ÿæˆæ“ä½œæ•°æ®Userçš„ç±»
 	 * 
 	 * @return
 	 */
 	public static IUser createUser() {
-		// ÀàµÄÈ«Â·¾¶
+		// ç±»çš„å…¨è·¯å¾„
 		String fullPath = PACKAGE_NAME + "." + dbname + USER;
 		IUser iUser = null;
 		try {
-			// Ê¹ÓÃ·´Éä¹¹½¨¶ÔÏó
+			// ä½¿ç”¨åå°„æ„å»ºå¯¹è±¡
 			Class<?> clazz = Class.forName(fullPath);
 			iUser = (IUser) clazz.newInstance();
 		} catch (ClassNotFoundException e) {
@@ -56,16 +56,16 @@ public class DataOperation {
 	}
 
 	/**
-	 * Éú³É²Ù×÷Êı¾İDepartmentµÄÀà
+	 * ç”Ÿæˆæ“ä½œæ•°æ®Departmentçš„ç±»
 	 * 
 	 * @return
 	 */
 	public static IDepartment createDepartment() {
-		// ÀàµÄÈ«Â·¾¶
+		// ç±»çš„å…¨è·¯å¾„
 		String fullPath = PACKAGE_NAME + "." + dbname + DEPARTMENT;
 		IDepartment iDepartment = null;
 		try {
-			// Ê¹ÓÃ·´Éä¹¹½¨¶ÔÏó
+			// ä½¿ç”¨åå°„æ„å»ºå¯¹è±¡
 			Class<?> clazz = Class.forName(fullPath);
 			iDepartment = (IDepartment) clazz.newInstance();
 		} catch (ClassNotFoundException e) {

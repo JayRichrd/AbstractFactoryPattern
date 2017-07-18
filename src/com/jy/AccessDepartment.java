@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 import com.jy.bean.Department;
 
@@ -6,18 +6,18 @@ public class AccessDepartment implements IDepartment {
 
 	@Override
 	public void insert(Department department) {
-		System.out.println("ÔÚAccessÖĞÔö¼ÓÒ»ÌõDepartment¼ÇÂ¼");
+		System.out.println("åœ¨Accessä¸­å¢åŠ ä¸€æ¡Departmentè®°å½•");
 	}
 
 	@Override
 	public Department getUser(int id) {
-		System.out.println("ÊäÈëµÄid£º" + id);
-		System.out.println("ÔÚAccessÖĞ¸ù¾İidÖµ»ñÈ¡Ò»ÌõDepartment¼ÇÂ¼");
+		System.out.println("è¾“å…¥çš„idï¼š" + id);
+		System.out.println("åœ¨Accessä¸­æ ¹æ®idå€¼è·å–ä¸€æ¡Departmentè®°å½•");
 		return null;
 	}
 
 	/**
-	 * ÎŞ²Î¹¹Ôìº¯Êı
+	 * æ— å‚æ„é€ å‡½æ•°
 	 */
 	public AccessDepartment() {
 		super();

@@ -1,4 +1,4 @@
-package com.jy.bean;
+﻿package com.jy.bean;
 
 public class User {
 	private int ID;
